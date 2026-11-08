@@ -1,0 +1,509 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #FFF2EF;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    color: white;
+    background: linear-gradient(to right, #E9A5F1, #E9A5F1);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+}
+
+.logo-icon {
+    font-size: 2rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('./images/baground.png') no-repeat center center/cover;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 40px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #FED2E2;
+    color: #333;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ffffff;
+}
+
+.produk-section {
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #E9A5F1;
+    position: relative;
+}
+
+.section-title:after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #E9A5F1;
+    margin: 10px auto;
+}
+
+.produk-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.produk-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.produk-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.produk-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.produk-info {
+    padding: 20px;
+}
+
+.produk-info h3 {
+    margin-bottom: 10px;
+    color: #E9A5F1;
+}
+
+.produk-info p {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.produk-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.produk-harga {
+    font-weight: bold;
+    color: #E9A5F1;
+    font-size: 1.1rem;
+}
+
+.btn-small {
+    background-color: #E9A5F1;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.btn-small:hover {
+    background-color: #E9A5F1;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    animation: modalFade 0.3s;
+}
+
+@keyframes modalFade {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+}
+
+.produk-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .produk-detail {
+        flex-direction: row;
+    }
+}
+
+.produk-detail-img {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.produk-detail-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.produk-detail-info {
+    flex: 1;
+}
+
+.produk-detail-info h2 {
+    color: #E9A5F1;
+    margin-bottom: 15px;
+}
+
+.produk-detail-info p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.produk-detail-harga {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #E9A5F1;
+    margin-bottom: 20px;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.quantity-btn {
+    background-color: #fffefe;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.quantity-display {
+    font-size: 1.2rem;
+    font-weight: bold;
+    min-width: 40px;
+    text-align: center;
+}
+
+.btn-pesan {
+    background-color: #E9A5F1;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-pesan:hover {
+    background-color: #E9A5F1;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-btn {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #ffffff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background-color: #E9A5F1;
+    color: rgb(0, 0, 0);
+}
+
+.keranjang-section {
+    padding: 60px 0;
+    min-height: 60vh;
+}
+
+.keranjang-item {
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255,);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.keranjang-item-info {
+    flex: 1;
+}
+
+.keranjang-item-info h3 {
+    color: #E9A5F1;
+    margin-bottom: 5px;
+}
+
+.keranjang-item-harga {
+    color: #E9A5F1;
+    font-weight: bold;
+}
+
+.keranjang-item-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.keranjang-item-total {
+    font-weight: bold;
+    color: #E9A5F1;
+}
+
+.btn-remove {
+    background-color: #e74c3c;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.keranjang-total {
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    padding: 30px;
+    margin-top: 30px;
+    box-shadow: 0 2px 5px  rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-info h3 {
+    color: #E9A5F1;
+    margin-bottom: 5px;
+}
+
+.btn-checkout {
+    background-color: #E9A5F1;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-checkout:hover {
+    background-color: #E9A5F1;
+}
+
+.keranjang-kosong {
+    text-align: center;
+    padding: 60px 20px;
+    color: #E9A5F1;
+}
+
+.keranjang-kosong h3 {
+    margin-bottom: 10px;
+    color: #E9A5F1;
+}
+footer {
+    background-color: #FED2E2;
+    color: rgb(0, 0, 0);
+    padding: 40px 0 20px;
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-section h3 {
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-section h3:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #FED2E2;
+}
+
+.footer-section p, .footer-section a {
+    color: #000000;
+    margin-bottom: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #FED2E2;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+    color: #000000;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    nav ul {
+        margin-top: 10px;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .keranjang-item {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .keranjang-total {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}

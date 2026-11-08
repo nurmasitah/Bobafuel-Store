@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang-BobaFuel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <span class="logo-icon">🧋</span>
+                <h1>BobaFuel</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="menu.html" class="active">Menu</a></li>
+                    <li><a href="keranjang.html" class="active">Keranjang (<span id="cartCountNav">0</span>)</a></li>
+                    <li><a href="tentang.html">Tentang Kami</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="keranjang-section">
+        <div class="container">
+            <h2 class="section-title">Keranjang Belanja</h2>
+            
+            <div id="keranjangContainer">
+            
+            </div>
+
+            <div class="keranjang-total">
+                <div class="total-info">
+                    <h3>Total Belanja: <span id="totalHarga">Rp 0</span></h3>
+                    <p id="jumlahItem">0 item</p>
+                </div>
+                <button class="btn-checkout" id="checkoutBtn">Checkout</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BobaFuel</h3>
+                    <p>Nikmati segarnya boba dengan rasa unik dan topping seru, dibuat dari bahan terbaik.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Kontak Kami</h3>
+                    <p>📞 +62 812-3456-7890</p>
+                    <p>✉️ info@warungnusa.com</p>
+                    <p>📍 Jl. Flores No. 123, Kupang, NTT</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Jam Operasional</h3>
+                    <p>Senin - Jumat: 09.00 - 21.00</p>
+                    <p>Sabtu - Minggu: 08.00 - 22.00</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 BobaFuel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+     
+        tampilkanKeranjang();
+        updateCartCount();
+        
+        document.getElementById('checkoutBtn').addEventListener('click', function() {
+            checkout();
+        });
+    </script>
+</body>
+</html>

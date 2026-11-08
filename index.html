@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BobaFuel - Boba dengan Rasa Autentik</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <span class="logo-icon">🧋</span>
+                <h1>BobaFuel</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Beranda</a></li>
+                    <li><a href="menu.html" class="active">Menu</a></li>
+                    <li><a href="keranjang.html">Keranjang</a></li>
+                    <li><a href="tentang.html">Tentang Kami</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Boba dengan Rasa Autentik</h2>
+            <p>Nikmati segarnya boba premium dengan cita rasa khas dan bahan berkualitas. Setiap tegukan menghadirkan pengalaman yang istimewa.</p>
+            <a href="menu.html" class="btn">Lihat Menu</a>
+        </div>
+    </section>
+
+    <section class="produk-section">
+        <div class="container">
+            <h2 class="section-title">Menu Populer</h2>
+            <div class="produk-grid" id="produkPopuler">
+                
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BobaFuel</h3>
+                    <p>Menyajikan boba dengan cita rasa autentik dan bahan-bahan berkualitas.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Kontak Kami</h3>
+                    <p>📞 +62 812-3456-7890</p>
+                    <p>✉️ info@warungnusa.com</p>
+                    <p>📍 Jl. Flores No. 123, Kupang, NTT</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Jam Operasional</h3>
+                    <p>Senin - Jumat: 09.00 - 21.00</p>
+                    <p>Sabtu - Minggu: 08.00 - 22.00</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 BobaFuel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        
+        const produkPopuler = produkData.slice(0, 4);
+        tampilkanProduk(produkPopuler, 'produkPopuler');
+    </script>
+</body>
+</html>

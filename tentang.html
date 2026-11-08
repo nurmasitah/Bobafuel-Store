@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - BobaFuel</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        
+        :root {
+            --primary-pink: #E9A5F1; 
+            --secondary-pink: #f5c4d6; 
+            --text-color: #333;
+            --heading-color: #5d4037; 
+            --light-purple: #e0b0ff; 
+            --logo-text-color: #5d4037; 
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #fff;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            padding: 15px 0;
+            background-color: var(--primary-pink);
+        
+        }
+
+        .navbar-container {
+            width: 90%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .logo img {
+            height: 35px; 
+            margin-right: 8px;
+        }
+        
+        .logo .logo-icon {
+            font-size: 2rem;
+            margin-right: 5px;
+        }
+
+        .navbar nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar nav ul li {
+            margin-left: 40px; 
+        }
+
+        .navbar nav ul li a {
+            text-decoration: none;
+            color: var(--heading-color);
+            font-weight: 400; 
+            padding: 5px 0;
+            transition: all 0.3s ease;
+        }
+
+        .navbar nav ul li a.active,
+        .navbar nav ul li a:hover {
+            color: white; 
+            font-weight: 600; 
+        }
+
+
+        .about-us-content {
+            padding: 40px 10%;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .main-heading {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--heading-color);
+            margin-bottom: 10px;
+            text-align: center;
+            padding-top: 30px; 
+            color: #af82c5; 
+        }
+
+        .heading-underline {
+            width: 150px;
+            height: 3px;
+            background-color: var(--light-purple);
+            border: none;
+            margin: 0 auto 50px auto;
+        }
+
+        section {
+            margin-bottom: 60px;
+            text-align: left;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            color: var(--heading-color);
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .story-section p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        .mission-points {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .point {
+            flex-basis: 30%;
+            padding: 20px;
+            border: 1px solid var(--secondary-pink);
+            border-radius: 8px;
+            background-color: var(--primary-pink);
+            text-align: center;
+        }
+
+        .point p:first-child {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .point h3 {
+            color: var(--heading-color);
+            margin-bottom: 10px;
+        }
+
+        .team-section {
+            text-align: center;
+        }
+
+        .team-member {
+            margin-top: 30px;
+            display: inline-block;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border: 5px solid var(--secondary-pink);
+        }
+
+        .team-member h3 {
+            color: var(--heading-color);
+            margin-bottom: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--primary-pink);
+            color: var(--heading-color);
+            border-top: 1px solid var(--secondary-pink);
+        }
+
+        @media (max-width: 768px) {
+            .navbar-container {
+                flex-direction: column;
+            }
+            .navbar nav ul {
+                margin-top: 10px;
+                justify-content: center;
+            }
+            .navbar nav ul li {
+                margin: 0 10px;
+            }
+            .mission-points {
+                flex-direction: column;
+            }
+            .point {
+                flex-basis: 100%;
+            }
+        }
+    </style>
+    </head>
+<body>
+
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <span class="logo-icon">🧋</span> <span>BobaFuel</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Beranda</a></li>
+                    <li><a href="menu.html" class="active">menu</a></li>
+                    <li><a href="Keranjang.html" class="active">Keranjang (0)</a></li>
+                    <li><a href="tentang.html" class="active">Tentang Kami</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="about-us-content">
+        <h1 class="main-heading">Tentang BobaFuel</h1>
+        <hr class="heading-underline">
+
+        <section class="story-section">
+            <h2>Perjalanan Kami ✨</h2>
+            <p><strong>BobaFuel</strong> lahir dari kecintaan kami pada minuman boba yang unik dan menyegarkan. Kami percaya bahwa minuman boba bukan hanya sekadar tren, tetapi sebuah pengalaman rasa yang dapat memberikan semangat di tengah kesibukan sehari-hari. Sejak didirikan pada tahun 2023, kami telah berkomitmen untuk menyajikan minuman boba dan kreasi unik lainnya, seperti perpaduan alpukat creamy (**Avoboba**) dan kopi susu segar (**Bobacino**), menggunakan bahan-bahan terbaik.</p>
+            <p>Filosofi kami sederhana: **"Bahan Terbaik, Rasa Terunik, Senyum Pelanggan Prioritas Utama."**</p>
+        </section>
+
+        <section class="mission-section">
+            <h2>Misi Kami 🎯</h2>
+            <div class="mission-points">
+                <div class="point">
+                    <p>✨</p>
+                    <h3>Inovasi Rasa</h3>
+                    <p>Terus berinovasi menciptakan rasa-rasa baru yang unik dan belum pernah ada, menggabungkan cita rasa lokal dan internasional.</p>
+                </div>
+                <div class="point">
+                    <p>🌿</p>
+                    <h3>Kualitas Premium</h3>
+                    <p>Memastikan setiap bahan yang digunakan adalah yang terbaik, dari boba kenyal hingga susu, alpukat, dan kopi premium.</p>
+                </div>
+                <div class="point">
+                    <p>💖</p>
+                    <h3>Kebahagiaan Pelanggan</h3>
+                    <p>Menyediakan pelayanan yang ramah dan cepat untuk memastikan pengalaman yang menyenangkan bagi setiap pelanggan.</p>
+                </div>
+            </div>
+        </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Halaman Tentang Kami BobaFuel telah dimuat.");
+        });
+    </script> 
+</body>
+</html>
